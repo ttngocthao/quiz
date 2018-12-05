@@ -160,9 +160,9 @@ h3 {
     display: block;
     cursor: pointer; }
 
-/*ends of container*/
+/*ends of muli-choice container*/
 .container:hover {
-  background-color: #c2ebef; }
+  background-color: #f0f7f8; }
 
 h3#question {
   text-align: center;
