@@ -106,7 +106,7 @@ body {
 .main-container {
   width: 100%;
   margin: 2% auto;
-  background-color: #03bedb;
+  background-color: linear-gradient(to bottom right, #02ddec, #049aa5, #046067);
   background-image: url("/images/428241-PE9X05-221.jpg");
   background-repeat: repeat-x;
   text-align: center; }
