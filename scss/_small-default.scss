@@ -1,0 +1,241 @@
+/*prevent adjustments of font size after oreientation changes in IE on windows phone and ios*/
+html{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%};
+
+/*apply a natural box layout model to all elements*/
+*{-moz-box-sizing: border-box;-webkit-box-sizing: border-box; box-sizing: border-box;}
+body{
+    font-size: 16px;
+    color: #023d3d;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*whole quiz container*/
+.main-container{
+    width: 100%;
+    margin: 2% auto;
+    background-color: #91d5e0;
+    background-image: url('/images/428241-PE9X05-221.jpg');
+    background-repeat: repeat-x;
+    text-align: center;
+}
+
+h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/*multiple choice container*/
+.container {
+    display: block;
+    position: relative;
+    width: 90%;
+    color: #023d3d;
+    border-radius: 10px;
+    padding: 0.5rem 3rem;
+    text-align: left;   
+    background-color: #a1d9dd;
+    margin: 0.5rem auto;
+    transition: 200ms ease-in;
+
+    /*-------- RADION BUTTON  -----------*/
+
+    /*hide the browser's default radio btn*/
+    input{
+        width:0;
+        cursor:pointer;
+    }
+    
+    input::after{
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+        content:'\f111';
+        position: absolute;
+        top: 0.1rem;
+        right:5%;
+        color: #046067;
+        font-size: 1.5rem;
+        transition: 0.2s ease-in;
+    }
+
+    input:checked:after{
+        font-display: 'Font Awesome 5 Free';
+        font-weight: 400;
+        content:'\f058';
+        position: absolute;
+    }
+
+    /*STYLE THE LABEL*/
+    .container label{
+        width: 100%;
+        display: block;        
+        cursor:pointer; 
+    }
+    
+
+}/*ends of container*/
+.container:hover{
+    background-color: #c2ebef;
+}
+
+h3#question {
+    text-align: center;
+    margin: 5% 2%;
+    font-size: 1.2rem;
+}
+
+h3#test_status {
+    padding: 5% 2% 5% 0;
+   
+    text-align: right;
+    border-bottom: 5px solid transparent;
+    padding: 0.7rem 2%;   
+    border-image: linear-gradient(to left, #3e81ab,transparent) 1;
+}
+
+div#test {
+    text-align: center;
+    padding: 1rem 0;
+  
+}
+
+/*BUTTONS ------ check and next btn*/
+.btn{
+    background-color:lighten(#3e81ab,20%) ;
+    margin: 1rem auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1% 2%;
+    font-size: 1rem;
+    transition: 0.5s ;
+}
+
+#next-btn span, #check-btn span, #restart-btn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#next-btn:hover, #check-btn:hover, #restart-btn:hover{
+    color: darken(#3e81ab,30%);
+    background-color: #a1d9dd;
+}
+
+#next-btn span::after {
+    content:" \f0a9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    opacity: 0;
+    transition:0.5s; 
+}
+
+#next-btn:hover span, #check-btn:hover span, #restart-btn:hover span  {
+    padding-right: 2rem;
+}
+
+#next-btn:hover span::after, #check-btn:hover span::after, #restart-btn:hover span::after{
+    opacity: 1;
+    right: 0;
+}
+
+#check-btn span::after,  #restart-btn span::after {
+    content:" \f059";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    opacity: 0;
+    transition:0.5s; 
+}
+
+
+
+/*for the result of each question*/
+h4 {
+    font-size: 1rem;
+    text-align:center;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    margin: 1rem auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+    margin-left: 2rem;
+    position: relative;
+}
+
+#result p{
+    text-align: left;
+}
+
+#result > p::before{   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;  
+    content:"\f6be"; 
+    margin: 0 2%;     
+}
+
+.gray-background{
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    width: 90%;
+    border-radius: 10px;
+    background-color: darkgrey;
+}
+
+.correct-answer{
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(105, 221, 140);
+}
+
+.correct-answer::after{
+    content:"\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
+    float: right;
+    margin: 0  5%;
+}
+
+.wrong-answer{
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(243, 97, 97);
+}
+
+.wrong-answer::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
+    content: "\f00d";
+    float: right;
+    margin: 0 5%;
+}
+/*Final result after the test finishes*/
+#final{
+    text-align: center;
+}
+
