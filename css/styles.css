@@ -142,6 +142,7 @@ body {
   width: 40%;
   position: relative;
   font-size: 1rem;
+  cursor: pointer;
   letter-spacing: .1rem;
   bottom: 1rem;
   padding: .5rem .3rem;
