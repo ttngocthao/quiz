@@ -104,56 +104,15 @@ body {
 
 /*whole quiz container*/
 .main-container {
-  opacity: 0;
   width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
   margin: 2% auto;
   background-image: url("../images/428241-PE9X05-221.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
-  transition: 2s; }
-
-#startBtn {
-  color: red; }
-
-.banner {
-  background-image: url("../images/428241-PE9X05-221.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
-  animation: fadeIn;
-  animation-duration: 5s;
-  animation-delay: 1s; }
+  text-align: center; }
 
 .banner img {
   width: 100%; }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-.banner #startBtn {
-  border: 2px solid lightgray;
-  width: 40%;
-  position: relative;
-  font-size: 1rem;
-  letter-spacing: .1rem;
-  bottom: 1rem;
-  padding: .5rem .3rem;
-  margin: .5rem auto;
-  color: white;
-  background-color: #7fb1d0;
-  border-radius: 0 10px 0 10px; }
-
-.banner #startBtn:hover {
-  border: 2px dotted lightgrey;
-  background: #3e81ab;
-  box-shadow: 2px 2px 2px gray; }
 
 h1 {
   font-size: 1.7rem;
@@ -336,19 +295,15 @@ h5 {
 #final {
   text-align: center; }
 
-@media only screen and (min-width: 560px) {
-  .main-container {
-    width: 90%;
-    box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.699); } }
 /*end media query*/
 @media only screen and (min-width: 1140px) {
   .main-container {
-    width: 60%; }
+    width: 50%;
+    box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.699);
+    color: red; }
 
-  .banner img {
-    width: 65%; }
-
-  .banner #startBtn {
-    width: 30%;
-    bottom: 5rem; } }
+  .main-container .banner img {
+    width: 80%; } }
 /*end media query*/
+
+/*# sourceMappingURL=styles.css.map */

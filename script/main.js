@@ -134,6 +134,13 @@ function restart(){
     renderQuestion();
 }
 //load the question
-window.addEventListener("load",renderQuestion,false);
+var startBtn = _('startBtn');
+startBtn.addEventListener("click",function(){
+    _('welcome').style.opacity = '0';
+    renderQuestion();
+    var mainContainer= document.getElementsByClassName('main-container');
+   mainContainer[0].style.opacity = '1' ;
+    
+},false);
 
 
