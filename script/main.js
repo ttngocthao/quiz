@@ -1,32 +1,7 @@
 var position = 0, test, test_status, question, userChoice,choices, chA,chB,chC,chD;
 var correct = 0;
 
-var bank = [
-    ['What does une bibliothèque mean ?','a libray','a house','a bakery','a shop',0],
-    ['What is une patinoire?','swimming pool','ice rink','car park','book shop',1],
-    ['What is un champignon ?','a carrot','a mushroom','a strawberry','an onion',1],
-    ['What does un librairie mean?','a library','a bank','a bookshop','a hospital',2],
-    ['Vous ........ dans un bureau?','travaille','travailles','travailler','travaillez',3],
-    ['Which of these can you not drink?','citron pressé ','fleu','chocolat','eau',1],
-    ['Les lettres sont ......... le tiroir dela commode?','dans','par','au','devant',0],
-    ['Which is not a means of transport?','bateau','camion','parapluie','moto',2],
-    ['Which is not edible?','riz','poisson','carte','poulet',2],
-    ['What is deux cent vingt?','20','2','100','220',3],
-    ['What is a baker shop?','une boulangerie','un timbre','une poste','un marché',0],
-    ['Which is 86?','soixante seize','cinquante six','quatre vingt seize','quatre-vingt six',3]
-]
-//shuffle the question bank
 
-function shuffle (){
-    var i = bank.length, j, temp;
-    while(--i>0){
-        j = Math.floor(Math.random()*(i+1));
-        temp = bank[j];
-        bank[j]= bank[i];
-        bank[i]= temp;
-    }
-    return bank;
-}
 //get the first 5 question after shuffling the bank
 shuffle();
 var questions = bank.slice(0,5);
